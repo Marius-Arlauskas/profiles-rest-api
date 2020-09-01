@@ -12,7 +12,6 @@ class UpdateOwnProfile(permissions.BasePermission):
 
 
 class UpdateOwnStatus(permissions.BasePermission):
-        """ Allow user to edit their own status """
         def has_object_permission(self, request, view, obj):
         """ Check if user is trying to edit their own status """
             if request.method in permissions.SAFE_METHODS:
